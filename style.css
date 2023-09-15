@@ -1,0 +1,115 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper{
+
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px; /* perspectiv la on karych for 3d effect*/
+    
+}
+
+.container{
+
+    position: relative;
+    height: 100%;
+    display: flex;   
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;   /* jass varrti define karto apan tasa ithe pan lakshat karun deych ki 3d perspective on thevych ahe*/
+    z-index: -1;
+
+}
+
+/* to adjust text */
+
+.background{
+
+    transform: translateZ(-40px) scale(6);
+}
+.foreground{
+    transform: translateZ(-40px) scale(5);
+}
+
+.background, .foreground{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;  /*images were not in good looking situation so we use this...*/
+    z-index: -1;  /* z-index -1 because to bring the hidden heading above the image */
+}
+
+h1{
+    
+    position: absolute;
+    color: rgb(5, 5, 5);
+    top: 5rem;
+    
+    
+    font-size: 10rem;
+    text-shadow: 2px,2px,4px;
+    letter-spacing: 4px;
+    text-shadow: 0 0 10px rgba(0,0,0,3);
+}
+
+section{
+    background-color: rgb(45, 45, 45);
+    color: white;
+    padding: 6rem 0;
+    
+    
+}
+
+.bg{
+
+    position: relative;
+   width: 100%;
+   background-attachment: fixed;
+   background-position: center;
+   background-size: cover;
+   height: 500px; 
+}
+
+.bg1{
+    background-image: url(sport-1.jpg);
+
+
+}
+
+.bg2{
+    background-image: url(sport-2.jpg);
+}
+
+.bg3{
+    background-image: url(sport-3.jpg);
+}
+.text{
+    font-size: 1.5rem;
+    padding: 0 20rem;
+    margin: 5rem 0;
+    
+}
+.secheading{
+    font-size: 5rem;
+    padding: 0 10rem;
+}
+
+.desc{
+    position: absolute;
+    top: 10rem;
+    font-size: 3.5rem;
+    padding: 0.5rem  2.5rem;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    color: black;
+    transform: translateX(-50%) translateX(-50%);
+    font-weight: 600;
+    
+}
